@@ -48,6 +48,27 @@ module MethodsQuiz
 		end
 	end
 
-	# TODO - write pig_latinify
+	def pig_latinify(string) #I DID IT MR PADGE NEGUFDHSFI WQOOHE 1 minute to write tests 43 to write method
+		string = string.downcase
+		string = string.strip
+		if string == "fuck" || string == "shit" || string == "ass" || string == "damn"
+			string.gsub!("a", "*")
+			string.gsub!("e", "*")
+			string.gsub!("i", "*")
+			string.gsub!("o", "*")
+			string.gsub!("u", "*")
+			if string[0] == "*" 
+				string[1, string.length] + "way"
+			else
+				string[1, string.length] + string[0] + "ay"
+			end
+		else 
+			if string[0] == "a" || string[0] == "e" || string[0] == "i" || string[0] == "o" || string[0] == "u"
+				string[0, string.length] + "way"
+			else
+				string[1, string.length - 1] + string[0] + "ay"
+			end 
+		end
+	end
 
 end
