@@ -8,7 +8,14 @@ module MethodsQuiz
 		end
 	end
 	
-	# TODO - write not_string
+	def not_string(string)
+		words = string.split
+		if words[0] == "not"
+			string
+		else
+			"not " + string
+		end
+	end
 	
 	# TODO - write icy_hot?
 	
