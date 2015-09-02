@@ -21,4 +21,9 @@ class MethodsQuizTest < MiniTest::Test
 		assert_equal true, @m.has_teen?(1, 1, 19)
 	end
 
+	def test_not_string
+		assert_equal "not hello", @m.not_string("hello")
+		assert_equal "not hello", @m.not_string("not hello")
+	end
+
 end
