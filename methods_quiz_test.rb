@@ -40,4 +40,11 @@ class MethodsQuizTest < MiniTest::Test
 		assert_equal 0, @m.closer_to(10, 5, 15)
 	end
 
+	def test_two_as_one?
+		assert_equal true, @m.two_as_one?(3, 2, 5)
+		assert_equal true, @m.two_as_one?(1, 4, 3)
+		assert_equal true, @m.two_as_one?(4, 2, 2)
+		assert_equal false, @m.two_as_one?(7, 8, 8)
+	end
+
 end
